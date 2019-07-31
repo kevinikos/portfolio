@@ -170,6 +170,7 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .introduction > * {
@@ -226,13 +227,40 @@ header {
   background: #fff;
   position: absolute;
   top: 0;
-  left: -55vw;
+  right: -55vw;
   display: none;
-  transition: 0.4s;
+  transition: 0.6s;
+}
+
+.sidebar::before {
+  content: "";
+  display: block;
+  position: relative;
 }
 
 .show {
-  left: 0;
+  right: 0;
+}
+
+.sidebar-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 2vh;
+  min-height: 20vh;
+}
+
+.sidebar-menu li {
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar-item {
+  text-decoration: none;
+  color: black;
+  margin: 2vh 0;
+  font-size: 2rem;
 }
 
 /* sidebar hamburger */
@@ -245,8 +273,8 @@ header {
   transition: transform 330ms ease-out;
   display: none;
   position: absolute;
-  top: 3vw;
-  right: 5vw;
+  top: 5vw;
+  left: -15vw;
 }
 
 .wrapper-menu.open {
