@@ -1,0 +1,523 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* layout */
+html {
+  font-size: 100%;
+}
+
+body {
+  background: #e2e1e0;
+}
+
+.shadow-container {
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 10px;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+section {
+  min-height: 30vh;
+  width: 100%;
+}
+
+.section-heading {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 5vw 0;
+  color: #eb3349;
+  /* background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0.52, #eb3349),
+    color-stop(0.76, #f45c43)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+.shadow {
+  border-bottom: 0 none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+}
+
+@media (max-width: 900px) {
+  .shadow-container {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* font */
+
+@media (orientation: portrait) and (max-width: 640px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 460px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 320px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 460px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 320px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* header */
+header {
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo,
+.navigation {
+  width: 50%;
+}
+
+.logo img {
+  height: 100%;
+}
+
+.nav-menu {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-menu li {
+  display: flex;
+}
+
+.nav-item {
+  font-size: 1.3rem;
+  margin: 0 25px;
+  text-decoration: none;
+  color: black;
+}
+
+/* cool underline */
+.nav-item::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(#eb3349, #f45c43);
+  transition: width 0.4s;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  header {
+    display: none;
+  }
+}
+
+/* introduction */
+.introduction {
+  height: 92vh;
+  width: 100%;
+  background: linear-gradient(#eb3349, #f45c43);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduction > * {
+  margin: 15px 0;
+}
+
+.avatar {
+  height: 25vh;
+}
+
+.avatar img {
+  height: 100%;
+}
+
+.introduction .content {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.content h1 {
+  font-size: 2rem;
+}
+
+.introduction button {
+  font-size: 1rem;
+  width: 200px;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: transparent;
+  color: white;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.introduction button:hover {
+  background: #ffffff;
+  color: #eb3349;
+  font-weight: 600;
+}
+
+.introduction button:focus {
+  outline: none;
+}
+
+@media (max-width: 900px) {
+  .introduction {
+    height: 100vh;
+  }
+}
+
+/* about-me */
+.about-me {
+  width: 90%;
+  margin: auto;
+}
+
+.event {
+  display: flex;
+}
+
+.event > * {
+  padding: 0 2vw;
+  width: 50%;
+}
+
+.event:first-child {
+  margin-bottom: 50px;
+}
+
+.event:last-child {
+  flex-direction: row-reverse;
+}
+
+.event-avatar {
+  max-height: 40vh;
+  min-width: 30vw;
+}
+
+.event-avatar img {
+  height: 100%;
+  width: 100%;
+}
+
+.event-description h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.event-description p {
+  margin-top: 2vh;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+@media (orientation: portrait) and (max-width: 900px) {
+  .about-me {
+    width: 80%;
+  }
+
+  .event,
+  .event:last-child {
+    flex-direction: column;
+  }
+
+  .event > * {
+    width: 100%;
+  }
+
+  .event-description h2 {
+    margin-top: 2vh;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .about-me {
+    width: 70%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .about-me {
+    width: 85%;
+  }
+}
+
+/* skills */
+.skills {
+  width: 70%;
+  margin: auto;
+}
+
+.flip-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 150px;
+  height: 190px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin: 2vw;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 25% 0;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #eee;
+  color: black;
+  padding: 20px 0;
+}
+
+.flip-card-front img {
+  height: 35%;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background: linear-gradient(#eb3349, #f45c43);
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 22px;
+  padding: 25px;
+}
+
+/* portfolio */
+.portfolio {
+  width: 90%;
+  margin: auto;
+}
+
+.project {
+  display: flex;
+  margin-bottom: 4vh;
+  /* Custom shadow box */
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
+  border-radius: 3px/6px;
+  -webkit-border-radius: 0% 0% 100% 100% / 0% 0% 8px 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 2px 3px;
+}
+
+.project > * {
+  width: 50%;
+}
+
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.project-avatar img {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.project-description {
+  background: #e95757;
+  padding: 4vw;
+}
+
+.project-description h2 {
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.project-description p {
+  margin-top: 2vh;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 1);
+  text-align: justify;
+}
+
+@media (orientation: portrait) and (max-width: 900px) {
+  .project,
+  .project:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .project > * {
+    width: 100%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .portfolio {
+    width: 100%;
+  }
+}
+
+/* contact */
+.contact {
+  width: 75%;
+  margin: auto;
+}
+
+.contact-ways {
+  display: flex;
+}
+
+.contact-box {
+  min-height: 22vh;
+  width: 45%;
+  margin: auto;
+  padding: 2vw;
+  text-align: center;
+}
+
+.contact-box img {
+  height: 40px;
+  width: 40px;
+}
+
+.contact-box p {
+  margin-top: 3vh;
+  font-size: 1.1rem;
+}
+
+@media (orientation: portrait) and (max-width: 900px) {
+  .contact-ways {
+    flex-direction: column;
+  }
+
+  .contact-box {
+    width: 80%;
+  }
+
+  .contact-box:last-child {
+    margin-top: 2vh;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 900px) {
+  .contact-box {
+    padding: 5vw;
+  }
+}
+@media (orientation: portrait) and (max-width: 460px) {
+  .contact {
+    width: 100%;
+  }
+}
+
+/* footer */
+footer {
+  margin-top: 10vh;
+}
+
+.animated-background {
+  background: url(../images/footer.gif);
+  min-height: 20vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+footer .content {
+  width: 80%;
+  margin: auto;
+  padding: 2vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+}
+
+.social-media img {
+  height: 95%;
+  width: 100%;
+  max-height: 60px;
+  max-width: 60px;
+  padding: 0.1vw;
+}
+
+.copyright-signature {
+  color: rgba(255, 255, 255, 0.8);
+}
