@@ -1,4 +1,4 @@
-function main() {
+function wrapper() {
   const wrapperMenu = document.querySelector(".wrapper-menu");
   const sidebar = document.querySelector(".sidebar");
 
@@ -8,4 +8,4 @@ function main() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", main);
+document.addEventListener("DOMContentLoaded", wrapper);

@@ -62,7 +62,6 @@ section {
 }
 
 /* font */
-
 @media (orientation: portrait) and (max-width: 640px) {
   html {
     font-size: 80%;
