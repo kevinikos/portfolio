@@ -7,6 +7,25 @@ function navigator() {
   const aboutMeButtons = document.querySelectorAll(".about-me-btn");
   const skillsButtons = document.querySelectorAll(".skills-btn");
   const projectsButtons = document.querySelectorAll(".projects-btn");
+  const scrollUp = document.querySelector(".scroll-up");
+
+  window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop > 500) {
+      sidebar.classList.remove("show");
+      wrapperMenu.classList.remove("open");
+      scrollUp.classList.add("show");
+    } else {
+      scrollUp.classList.remove("show");
+    }
+  });
+
+  scrollUp.addEventListener("click", e => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
 
   aboutMeButtons.forEach(button => {
     button.addEventListener("click", e => {
@@ -36,13 +55,6 @@ function navigator() {
         behavior: "smooth"
       });
     });
-  });
-
-  window.addEventListener("scroll", () => {
-    if (document.documentElement.scrollTop > 500) {
-      sidebar.classList.remove("show");
-      wrapperMenu.classList.remove("open");
-    }
   });
 }
 

@@ -241,7 +241,7 @@ header {
   position: relative;
 }
 
-.show {
+.sidebar.show {
   right: 0;
 }
 
@@ -628,9 +628,28 @@ footer .content {
   width: 100%;
   max-height: 60px;
   max-width: 60px;
-  padding: 1vw;
+  padding: 0.4rem;
 }
 
 .copyright-signature {
   color: rgba(255, 255, 255, 0.8);
+}
+
+/* scroll up button */
+
+.scroll-up {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 4rem;
+  position: fixed;
+  bottom: -10vh;
+  right: 4vw;
+  transition: 0.4s;
+}
+
+.scroll-up:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.scroll-up.show {
+  bottom: 2vh;
 }
