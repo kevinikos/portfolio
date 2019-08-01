@@ -39,7 +39,6 @@ function navigator() {
   });
 
   window.addEventListener("scroll", () => {
-    console.log(document.documentElement.scrollTop);
     if (document.documentElement.scrollTop > 500) {
       sidebar.classList.remove("show");
       wrapperMenu.classList.remove("open");
