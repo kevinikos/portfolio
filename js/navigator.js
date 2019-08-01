@@ -26,10 +26,11 @@ function navigator() {
     });
   };
 
-  window.addEventListener("scroll", scrollStart);
-
   // Safari
-  window.addEventListener("touchmove", scrollStart);
+  document.addEventListener("touchmove", scrollStart);
+
+  // Other browsers
+  document.addEventListener("scroll", scrollStart);
 
   scrollUp.addEventListener("click", e => {
     e.preventDefault();
