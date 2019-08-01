@@ -9,7 +9,7 @@ function navigator() {
   const projectsButtons = document.querySelectorAll(".projects-btn");
   const scrollUp = document.querySelector(".scroll-up");
 
-  window.addEventListener("scroll", () => {
+  const scrollStart = () => {
     if (document.documentElement.scrollTop > 500) {
       sidebar.classList.remove("show");
       wrapperMenu.classList.remove("open");
@@ -17,43 +17,43 @@ function navigator() {
     } else {
       scrollUp.classList.remove("show");
     }
-  });
+  };
+
+  const scrollToSection = section => {
+    window.scrollTo({
+      top: section,
+      behavior: "smooth"
+    });
+  };
+
+  window.addEventListener("scroll", scrollStart);
+
+  // Safari
+  window.addEventListener("touchmove", scrollStart);
 
   scrollUp.addEventListener("click", e => {
     e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    scrollToSection(0);
   });
 
   aboutMeButtons.forEach(button => {
     button.addEventListener("click", e => {
       e.preventDefault();
-      window.scrollTo({
-        top: aboutMe.offsetTop,
-        behavior: "smooth"
-      });
+      scrollToSection(aboutMe.offsetTop);
     });
   });
 
   skillsButtons.forEach(button => {
     button.addEventListener("click", e => {
       e.preventDefault();
-      window.scrollTo({
-        top: skills.offsetTop,
-        behavior: "smooth"
-      });
+      scrollToSection(skills.offsetTop);
     });
   });
 
   projectsButtons.forEach(button => {
     button.addEventListener("click", e => {
       e.preventDefault();
-      window.scrollTo({
-        top: projects.offsetTop,
-        behavior: "smooth"
-      });
+      scrollToSection(projects.offsetTop);
     });
   });
 }
