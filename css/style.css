@@ -414,10 +414,10 @@ header {
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-  width: 150px;
-  height: 190px;
+  width: 10rem;
+  height: 12rem;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  margin: 2vw;
+  margin: 1vw;
 }
 
 /* This container is needed to position the front and back side */
@@ -450,11 +450,15 @@ header {
 .flip-card-front {
   background-color: #eee;
   color: black;
-  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.flip-card-front img {
-  height: 35%;
+.flip-card-front .fas,
+.flip-card-front .fab {
+  font-size: 4rem;
+  margin-bottom: 1vw;
 }
 
 /* Style the back side */
@@ -462,8 +466,11 @@ header {
   background: linear-gradient(#eb3349, #f45c43);
   color: white;
   transform: rotateY(180deg);
-  font-size: 22px;
-  padding: 25px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vw;
 }
 
 /* portfolio */
