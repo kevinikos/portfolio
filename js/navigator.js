@@ -1,4 +1,5 @@
 function navigator() {
+  const wrapperMenu = document.querySelector(".wrapper-menu");
   const sidebar = document.querySelector(".sidebar");
   const aboutMe = document.querySelector(".about-me");
   const skills = document.querySelector(".skills");
@@ -14,7 +15,6 @@ function navigator() {
         top: aboutMe.offsetTop,
         behavior: "smooth"
       });
-      sidebar.classList.remove("show");
     });
   });
 
@@ -25,7 +25,6 @@ function navigator() {
         top: skills.offsetTop,
         behavior: "smooth"
       });
-      sidebar.classList.remove("show");
     });
   });
 
@@ -36,8 +35,15 @@ function navigator() {
         top: projects.offsetTop,
         behavior: "smooth"
       });
-      sidebar.classList.remove("show");
     });
+  });
+
+  window.addEventListener("scroll", () => {
+    console.log(document.documentElement.scrollTop);
+    if (document.documentElement.scrollTop > 500) {
+      sidebar.classList.remove("show");
+      wrapperMenu.classList.remove("open");
+    }
   });
 }
 
