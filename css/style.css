@@ -17,10 +17,9 @@ body {
 }
 
 .shadow-container {
-  width: 90%;
+  width: 100%;
   max-width: 1280px;
   margin: auto;
-  padding: 0 10px;
   background: white;
   border-radius: 2px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -36,17 +35,8 @@ section {
   letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
-  margin: 5vw 0;
+  padding: 5vw 0;
   color: #eb3349;
-  /* background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(0.52, #eb3349),
-    color-stop(0.76, #f45c43)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
 }
 
 .shadow {
@@ -126,6 +116,7 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-right: 1vw;
 }
 
 .nav-menu li {
@@ -134,7 +125,7 @@ header {
 
 .nav-item {
   font-size: 1.3rem;
-  margin: 0 25px;
+  margin: 0 1.6vw;
   text-decoration: none;
   color: black;
 }
