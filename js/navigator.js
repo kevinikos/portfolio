@@ -2,6 +2,7 @@ function navigator() {
   const wrapperMenu = document.querySelector(".wrapper-menu");
   const sidebar = document.querySelector(".sidebar");
   const scrollUpBtn = document.querySelector(".scroll-up");
+  const introSection = document.querySelector(".introduction");
   const aboutMeSection = document.querySelector(".about-me");
   const skillsSection = document.querySelector(".skills");
   const projectsSection = document.querySelector(".portfolio");
@@ -13,13 +14,11 @@ function navigator() {
   const scrollElm = document.scrollingElement;
 
   const scrollStart = () => {
-    if (scrollElm.scrollTop) {
-      sidebar.classList.remove("show");
-      wrapperMenu.classList.remove("open");
-      scrollUpBtn.classList.add("show");
-    } else {
-      scrollUpBtn.classList.remove("show");
-    }
+    sidebar.classList.remove("show");
+    wrapperMenu.classList.remove("open");
+    scrollElm.scrollTop > introSection.offsetTop
+      ? scrollUpBtn.classList.add("show")
+      : scrollUpBtn.classList.remove("show");
   };
 
   const scrollToSection = section => {
