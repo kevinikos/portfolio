@@ -1,7 +1,7 @@
 function navigator() {
   const wrapperMenu = document.querySelector(".wrapper-menu");
   const sidebar = document.querySelector(".sidebar");
-  const scrollUpButton = document.querySelector(".scroll-up");
+  const scrollUpBtn = document.querySelector(".scroll-up");
   const aboutMeSection = document.querySelector(".about-me");
   const skillsSection = document.querySelector(".skills");
   const projectsSection = document.querySelector(".portfolio");
@@ -13,12 +13,12 @@ function navigator() {
   const scrollElm = document.scrollingElement;
 
   const scrollStart = () => {
-    if (scrollElm.scrollTop != 0) {
+    if (scrollElm.scrollTop) {
       sidebar.classList.remove("show");
       wrapperMenu.classList.remove("open");
-      scrollUpButton.classList.add("show");
+      scrollUpBtn.classList.add("show");
     } else {
-      scrollUpButton.classList.remove("show");
+      scrollUpBtn.classList.remove("show");
     }
   };
 
