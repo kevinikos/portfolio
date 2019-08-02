@@ -1,22 +1,24 @@
 function navigator() {
   const wrapperMenu = document.querySelector(".wrapper-menu");
   const sidebar = document.querySelector(".sidebar");
-  const aboutMe = document.querySelector(".about-me");
-  const skills = document.querySelector(".skills");
-  const projects = document.querySelector(".portfolio");
-  const aboutMeButtons = document.querySelectorAll(".about-me-btn");
-  const skillsButtons = document.querySelectorAll(".skills-btn");
-  const projectsButtons = document.querySelectorAll(".projects-btn");
-  const scrollUp = document.querySelector(".scroll-up");
+  const scrollUpButton = document.querySelector(".scroll-up");
+  const aboutMeSection = document.querySelector(".about-me");
+  const skillsSection = document.querySelector(".skills");
+  const projectsSection = document.querySelector(".portfolio");
+  // Header/sidebar menu list items
+  const startBtns = document.querySelectorAll(".start-btn");
+  const aboutMeBtns = document.querySelectorAll(".about-me-btn");
+  const skillsBtns = document.querySelectorAll(".skills-btn");
+  const projectsBtns = document.querySelectorAll(".projects-btn");
   const scrollElm = document.scrollingElement;
 
   const scrollStart = () => {
-    if (scrollElm.scrollTop > 500) {
+    if (scrollElm.scrollTop != 0) {
       sidebar.classList.remove("show");
       wrapperMenu.classList.remove("open");
-      scrollUp.classList.add("show");
+      scrollUpButton.classList.add("show");
     } else {
-      scrollUp.classList.remove("show");
+      scrollUpButton.classList.remove("show");
     }
   };
 
@@ -27,35 +29,33 @@ function navigator() {
     });
   };
 
-  // Safari
-  document.addEventListener("touchmove", scrollStart);
-
-  // Other browsers
   document.addEventListener("scroll", scrollStart);
 
-  scrollUp.addEventListener("click", e => {
-    e.preventDefault();
-    scrollToSection(0);
-  });
-
-  aboutMeButtons.forEach(button => {
+  startBtns.forEach(button => {
     button.addEventListener("click", e => {
       e.preventDefault();
-      scrollToSection(aboutMe.offsetTop);
+      scrollToSection(0);
     });
   });
 
-  skillsButtons.forEach(button => {
+  aboutMeBtns.forEach(button => {
     button.addEventListener("click", e => {
       e.preventDefault();
-      scrollToSection(skills.offsetTop);
+      scrollToSection(aboutMeSection.offsetTop);
     });
   });
 
-  projectsButtons.forEach(button => {
+  skillsBtns.forEach(button => {
     button.addEventListener("click", e => {
       e.preventDefault();
-      scrollToSection(projects.offsetTop);
+      scrollToSection(skillsSection.offsetTop);
+    });
+  });
+
+  projectsBtns.forEach(button => {
+    button.addEventListener("click", e => {
+      e.preventDefault();
+      scrollToSection(projectsSection.offsetTop);
     });
   });
 }
