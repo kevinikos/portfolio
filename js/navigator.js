@@ -8,9 +8,11 @@ function navigator() {
   const skillsButtons = document.querySelectorAll(".skills-btn");
   const projectsButtons = document.querySelectorAll(".projects-btn");
   const scrollUp = document.querySelector(".scroll-up");
+  const scrollElm = document.scrollingElement;
 
   const scrollStart = () => {
-    if (document.documentElement.scrollTop > 500) {
+    console.log(scrollElm.scrollTop);
+    if (scrollElm.scrollTop > 500) {
       sidebar.classList.remove("show");
       wrapperMenu.classList.remove("open");
       scrollUp.classList.add("show");
