@@ -641,8 +641,8 @@ footer .content {
   color: rgba(0, 0, 0, 0.6);
   font-size: 4rem;
   position: fixed;
-  bottom: -20vh;
-  right: 4vw;
+  bottom: 10vh;
+  right: -20vw;
   -moz-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -655,5 +655,5 @@ footer .content {
 }
 
 .scroll-up.show {
-  bottom: 2vh;
+  right: 3vw;
 }

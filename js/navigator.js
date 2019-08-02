@@ -11,7 +11,6 @@ function navigator() {
   const scrollElm = document.scrollingElement;
 
   const scrollStart = () => {
-    console.log(scrollElm.scrollTop);
     if (scrollElm.scrollTop > 500) {
       sidebar.classList.remove("show");
       wrapperMenu.classList.remove("open");
