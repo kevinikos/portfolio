@@ -137,7 +137,7 @@ header {
   display: block;
   width: 0;
   height: 4px;
-  background: linear-gradient(#eb3349, #f45c43);
+  background: linear-gradient(#f45c43, #eb3349);
   transition: width 0.4s;
 }
 
@@ -155,7 +155,7 @@ header {
 .introduction {
   height: 92vh;
   width: 100%;
-  background: linear-gradient(#eb3349, #f45c43);
+  background: linear-gradient(#f45c43, #eb3349, #aa2938);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -474,7 +474,7 @@ header {
 
 /* Style the back side */
 .flip-card-back {
-  background: linear-gradient(#eb3349, #f45c43);
+  background: linear-gradient(#f45c43, #eb3349, #aa2938);
   color: white;
   transform: rotateY(180deg);
   font-size: 1.2rem;
