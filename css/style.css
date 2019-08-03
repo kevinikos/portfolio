@@ -23,6 +23,7 @@ body {
   background: white;
   border-radius: 2px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  overflow: hidden;
 }
 
 section {
@@ -330,6 +331,18 @@ header {
 
 .event {
   display: flex;
+  opacity: 0;
+  transition: all 0.6s;
+  transform: translateX(-30%) scale(0.95);
+}
+
+.event:nth-child(even) {
+  transform: translateX(30%) scale(0.95);
+}
+
+.event.show {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
 }
 
 .event > * {
@@ -486,6 +499,18 @@ header {
   border-radius: 3px/6px;
   -webkit-border-radius: 0% 0% 100% 100% / 0% 0% 8px 8px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 2px 3px;
+  opacity: 0;
+  transition: all 0.6s;
+  transform: translateX(-30%) scale(0.95);
+}
+
+.project:nth-child(even) {
+  transform: translateX(30%) scale(0.95);
+}
+
+.project.show {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
 }
 
 .project > * {
