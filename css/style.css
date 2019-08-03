@@ -20,7 +20,7 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: auto;
-  background: white;
+  background: #fff;
   border-radius: 2px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   overflow: hidden;
@@ -180,7 +180,7 @@ header {
 }
 
 .introduction .content {
-  color: white;
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
 }
@@ -200,17 +200,17 @@ header {
   letter-spacing: 1px;
   text-transform: uppercase;
   background: transparent;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   border-radius: 50px;
-  border: 2px solid #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.9);
   cursor: pointer;
   transition: 0.4s;
+  font-weight: 600;
 }
 
 .introduction button:hover {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.9);
   color: #eb3349;
-  font-weight: 600;
 }
 
 .introduction button:focus {
@@ -474,7 +474,7 @@ header {
 /* Style the back side */
 .flip-card-back {
   background: linear-gradient(#f45c43, #eb3349, #aa2938);
-  color: white;
+  color: #fff;
   transform: rotateY(180deg);
   font-size: 1.2rem;
   display: flex;
