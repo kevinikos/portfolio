@@ -109,6 +109,8 @@ header {
 
 .logo img {
   height: 100%;
+  max-height: 75px;
+  max-width: 97px;
 }
 
 .nav-menu {
