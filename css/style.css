@@ -18,7 +18,7 @@ body {
 
 .shadow-container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: auto;
   background: #fff;
   border-radius: 2px;
@@ -428,7 +428,7 @@ header {
   width: 10rem;
   height: 12rem;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  margin: 1vw;
+  margin: 2vw;
 }
 
 /* This container is needed to position the front and back side */
@@ -544,6 +544,12 @@ header {
   text-align: justify;
 }
 
+@media (max-width: 1024px) {
+  .flip-card {
+    margin: 1vw;
+  }
+}
+
 @media (orientation: portrait) and (max-width: 900px) {
   .project,
   .project:nth-child(even) {
@@ -639,12 +645,8 @@ footer .content {
 footer .fab {
   font-size: 3rem;
   margin: 0 0.2vw;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.7);
   transition: 0.4s;
-}
-
-footer .fab:hover {
-  color: rgba(0, 0, 0, 1);
 }
 
 /* scroll up button */
