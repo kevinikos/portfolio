@@ -98,14 +98,8 @@ section {
 /* navbar */
 .navbar {
   width: 100%;
-  position: fixed;
+  position: absolute;
   background: rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  position: fixed;
-}
-
-.navbar.show {
-  background: rgba(0, 0, 0, 0.8);
 }
 
 .navbar-menu {
