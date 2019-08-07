@@ -1,4 +1,4 @@
-function navigator() {
+function scrollToSection() {
   const wrapperMenu = document.querySelector(".wrapper-menu");
   const sidebar = document.querySelector(".sidebar");
   const scrollUpBtn = document.querySelector(".scroll-up");
@@ -59,4 +59,4 @@ function navigator() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", navigator);
+document.addEventListener("DOMContentLoaded", scrollToSection);
