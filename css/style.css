@@ -541,7 +541,40 @@ header {
   margin-top: 2vh;
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 1);
-  text-align: justify;
+}
+
+.project-avatar {
+  position: relative;
+}
+
+.project-repo {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2vw;
+  transition: opacity 0.5s ease-out;
+  opacity: 0;
+}
+
+.inner-border {
+  height: 100%;
+  border: 1px solid #fff;
+}
+
+.project-repo .fab {
+  color: #fff;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.project-avatar:hover .project-repo {
+  opacity: 1;
 }
 
 @media (max-width: 1024px) {
