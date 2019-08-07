@@ -1,12 +1,12 @@
 function scrollToSection() {
   const wrapperMenu = document.querySelector(".wrapper-menu");
-  const sidebar = document.querySelector(".sidebar");
+  const sidebar = document.querySelector(".sidenav");
   const scrollUpBtn = document.querySelector(".scroll-up");
   const introSection = document.querySelector(".introduction");
   const aboutMeSection = document.querySelector(".about-me");
   const skillsSection = document.querySelector(".skills");
   const projectsSection = document.querySelector(".portfolio");
-  // Header/sidebar menu list items
+  // navbar/sidebar menu list items
   const startBtns = document.querySelectorAll(".start-btn");
   const aboutMeBtns = document.querySelectorAll(".about-me-btn");
   const skillsBtns = document.querySelectorAll(".skills-btn");

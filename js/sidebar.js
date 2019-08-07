@@ -1,6 +1,6 @@
-function wrapper() {
+function sidebar() {
   const wrapperMenu = document.querySelector(".wrapper-menu");
-  const sidebar = document.querySelector(".sidebar");
+  const sidebar = document.querySelector(".sidenav");
 
   wrapperMenu.addEventListener("click", function() {
     wrapperMenu.classList.toggle("open");
@@ -8,4 +8,4 @@ function wrapper() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", wrapper);
+document.addEventListener("DOMContentLoaded", sidebar);
