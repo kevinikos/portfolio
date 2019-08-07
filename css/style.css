@@ -37,7 +37,6 @@ section {
   text-align: center;
   text-transform: uppercase;
   padding: 5vw 0;
-  color: #eb3349;
 }
 
 .shadow {
@@ -157,27 +156,15 @@ header {
 .introduction {
   height: 92vh;
   width: 100%;
-  background: linear-gradient(#f45c43, #eb3349, #aa2938);
+  background: url(https://images.unsplash.com/photo-1456305951335-bb8134aeab8a);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.introduction > * {
-  margin: 1rem 0;
-}
-
-.avatar {
-  height: 25vh;
-}
-
-.avatar img {
-  height: 100%;
-  border: 4px solid #aa2938;
-  border-radius: 100%;
-  background-size: cover;
-  background-position: center;
 }
 
 .introduction .content {
@@ -187,35 +174,11 @@ header {
 }
 
 .content h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .content p {
-  font-size: 1.2rem;
-}
-
-.introduction button {
-  font-size: 1.1rem;
-  width: 100%;
-  padding: 1rem 2rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.9);
-  border-radius: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.9);
-  cursor: pointer;
-  transition: 0.4s;
-  font-weight: 600;
-}
-
-.introduction button:hover {
-  background: rgba(255, 255, 255, 0.9);
-  color: #eb3349;
-}
-
-.introduction button:focus {
-  outline: none;
+  font-size: 1.5rem;
 }
 
 /* sidebar */
