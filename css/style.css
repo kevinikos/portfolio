@@ -16,20 +16,18 @@ body {
   background: #f5f5f5;
 }
 
-.shadow-container {
-  width: 100%;
+.main-width {
   max-width: 1600px;
   margin: auto;
-  background: #fff;
-  border-radius: 2px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 5vh;
   overflow: hidden;
-  position: relative;
 }
 
 section {
   min-height: 30vh;
-  width: 100%;
+  width: 90%;
+  margin: 10vh auto;
+  background: #fff;
 }
 
 .section-heading {
@@ -37,7 +35,7 @@ section {
   letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
-  padding: 5vw 0;
+  padding-bottom: 5vw;
 }
 
 .section-heading h1 {
@@ -51,9 +49,9 @@ section {
 }
 
 @media (max-width: 900px) {
-  .shadow-container {
+  section {
     width: 100%;
-    padding: 0;
+    margin: 0 auto;
   }
 }
 
@@ -84,9 +82,11 @@ section {
 
 /* navbar */
 .navbar {
-  width: 100%;
-  position: absolute;
+  width: 90%;
+  left: 5%;
+  position: fixed;
   background: rgba(0, 0, 0, 0.2);
+  z-index: 9999;
 }
 
 .navbar-menu {
@@ -127,6 +127,13 @@ section {
   width: 100%;
 }
 
+@media (max-width: 1600px) {
+  .navbar {
+    width: 100%;
+    left: 0;
+  }
+}
+
 @media (max-width: 900px) {
   .navbar {
     display: none;
@@ -135,8 +142,9 @@ section {
 
 /* introduction */
 .introduction {
+  margin: 0 auto;
   height: 100vh;
-  width: 100%;
+  width: 90%;
   background: url(https://images.unsplash.com/photo-1456305951335-bb8134aeab8a);
   background-attachment: fixed;
   background-position: center;
@@ -191,6 +199,12 @@ section {
 
 .btn:hover {
   background-color: #333;
+}
+
+@media (max-width: 1600px) {
+  .introduction {
+    width: 100%;
+  }
 }
 
 /* sidebar */
@@ -290,25 +304,16 @@ section {
 }
 
 @media (max-width: 900px) {
-  .introduction {
-    height: 100vh;
+  .sidenav {
+    display: block;
   }
 
   .wrapper-menu {
     display: flex;
   }
-
-  .sidenav {
-    display: block;
-  }
 }
 
 /* about-me */
-.about-me {
-  width: 90%;
-  margin: auto;
-}
-
 .event {
   display: flex;
   opacity: 0;
@@ -355,10 +360,6 @@ section {
 }
 
 @media (orientation: portrait) and (max-width: 900px) {
-  .about-me {
-    width: 80%;
-  }
-
   .event,
   .event:last-child {
     flex-direction: column;
@@ -373,24 +374,7 @@ section {
   }
 }
 
-@media (orientation: landscape) and (max-width: 900px) {
-  .about-me {
-    width: 70%;
-  }
-}
-
-@media (orientation: landscape) and (max-width: 768px) {
-  .about-me {
-    width: 85%;
-  }
-}
-
 /* skills */
-.skills {
-  width: 70%;
-  margin: auto;
-}
-
 .flip-cards {
   display: flex;
   justify-content: space-around;
@@ -460,10 +444,6 @@ section {
 }
 
 /* portfolio */
-.portfolio {
-  width: 90%;
-  margin: auto;
-}
 
 .project {
   display: flex;
@@ -565,18 +545,7 @@ section {
   }
 }
 
-@media (orientation: landscape) and (max-width: 900px) {
-  .portfolio {
-    width: 100%;
-  }
-}
-
 /* contact */
-.contact {
-  width: 75%;
-  margin: auto;
-}
-
 .contact-ways {
   display: flex;
 }
@@ -618,18 +587,13 @@ section {
     padding: 5vw;
   }
 }
-@media (orientation: portrait) and (max-width: 460px) {
-  .contact {
-    width: 100%;
-  }
-}
 
 /* footer */
 footer {
-  margin-top: 10vh;
   position: relative;
   height: 40vh;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   background: linear-gradient(#414345, #232526);
 }
 
