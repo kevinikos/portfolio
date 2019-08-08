@@ -37,7 +37,6 @@ section {
   text-align: center;
   text-transform: uppercase;
   padding: 5vw 0;
-  /* color: #3a404c; */
 }
 
 .section-heading h1 {
@@ -167,6 +166,31 @@ section {
 
 .content p {
   font-size: 1.5rem;
+}
+
+.btn {
+  font-size: 1.2rem;
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  display: inline-block;
+  line-height: 1.25rem;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+  background-color: #000;
+  border-color: #666;
+}
+
+.btn:hover {
+  background-color: #333;
 }
 
 /* sidebar */
