@@ -1,5 +1,6 @@
 function scrollToSection() {
   const wrapperMenu = document.querySelector(".wrapper-menu");
+  const navbar = document.querySelector(".navbar");
   const sidebar = document.querySelector(".sidenav");
   const scrollUpBtn = document.querySelector(".scroll-up");
   const introSection = document.querySelector(".introduction");
@@ -19,11 +20,14 @@ function scrollToSection() {
     scrollElm.scrollTop > introSection.offsetTop
       ? scrollUpBtn.classList.add("show")
       : scrollUpBtn.classList.remove("show");
+    scrollElm.scrollTop > introSection.offsetHeight
+      ? navbar.classList.add("active")
+      : navbar.classList.remove("active");
   };
 
   const scrollToSection = section => {
     window.scrollTo({
-      top: section,
+      top: section - navbar.offsetHeight,
       behavior: "smooth"
     });
   };
