@@ -35,7 +35,7 @@ section {
   letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
-  padding-bottom: 5vw;
+  margin-bottom: 5vw;
 }
 
 .section-heading h1 {
@@ -49,9 +49,17 @@ section {
 }
 
 @media (max-width: 900px) {
+  .main-width {
+    padding: 1vh 5vh;
+  }
+
   section {
     width: 100%;
     margin: 0 auto;
+  }
+
+  .section-heading {
+    margin: 5vh 0;
   }
 }
 
@@ -392,7 +400,7 @@ section {
   width: 10rem;
   height: 12rem;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  margin: 2vw;
+  margin: 2.5vw 4vw;
 }
 
 /* This container is needed to position the front and back side */
@@ -463,6 +471,10 @@ section {
   transform: translateX(-30%) scale(0.95);
 }
 
+.project:last-child {
+  margin-bottom: 0;
+}
+
 .project:nth-child(even) {
   transform: translateX(30%) scale(0.95);
 }
@@ -488,6 +500,9 @@ section {
 
 .project-description {
   padding: 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .project-description h2 {
@@ -535,7 +550,7 @@ section {
 
 @media (max-width: 1024px) {
   .flip-card {
-    margin: 1vw;
+    margin: 1.5vw 3vw;
   }
 }
 
@@ -556,7 +571,7 @@ section {
 }
 
 .contact-box {
-  min-height: 22vh;
+  min-height: 15vh;
   width: 45%;
   margin: auto;
   padding: 2vw;
@@ -596,10 +611,10 @@ section {
 /* footer */
 footer {
   position: relative;
-  height: 40vh;
+  height: 60vh;
   width: 90%;
-  margin: auto;
-  background: linear-gradient(#414345, #232526);
+  margin: 0 auto;
+  background: #000;
 }
 
 footer .content {
@@ -621,6 +636,12 @@ footer .fab {
   margin: 0 0.2vw;
   color: rgba(255, 255, 255, 0.8);
   transition: 0.4s;
+}
+
+@media (max-width: 1600px) {
+  footer {
+    width: 100%;
+  }
 }
 
 /* scroll up button */
