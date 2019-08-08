@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300,400,700");
+
 * {
   margin: 0;
   padding: 0;
@@ -170,7 +171,6 @@ section {
 
 .btn {
   font-size: 1.2rem;
-  /* text-transform: uppercase; */
   letter-spacing: 1px;
   margin-top: 1rem;
   display: inline-block;
@@ -468,7 +468,6 @@ section {
 .project {
   display: flex;
   margin-bottom: 4vh;
-  /* Custom shadow box */
   border: 1px solid #ccc;
   box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
   border-radius: 3px/6px;
