@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300,400,700");
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,7 @@ html {
 }
 
 body {
-  background: #e2e1e0;
+  background: #f5f5f5;
 }
 
 .shadow-container {
@@ -38,6 +37,12 @@ section {
   text-align: center;
   text-transform: uppercase;
   padding: 5vw 0;
+  /* color: #3a404c; */
+}
+
+.section-heading h1 {
+  font-weight: normal;
+  font-family: "Oswald", sans-serif;
 }
 
 .shadow {
@@ -53,43 +58,25 @@ section {
 }
 
 /* font */
-@media (orientation: portrait) and (max-width: 640px) {
-  html {
-    font-size: 80%;
-  }
-}
-
-@media (orientation: portrait) and (max-width: 460px) {
+@media (max-width: 900px) {
   html {
     font-size: 75%;
   }
 }
 
-@media (orientation: portrait) and (max-width: 320px) {
+@media (max-width: 640px) {
   html {
     font-size: 70%;
   }
 }
 
-@media (orientation: landscape) and (max-width: 900px) {
-  html {
-    font-size: 75%;
-  }
-}
-
-@media (orientation: landscape) and (max-width: 640px) {
-  html {
-    font-size: 70%;
-  }
-}
-
-@media (orientation: landscape) and (max-width: 460px) {
+@media (max-width: 460px) {
   html {
     font-size: 60%;
   }
 }
 
-@media (orientation: landscape) and (max-width: 320px) {
+@media (max-width: 320px) {
   html {
     font-size: 50%;
   }
@@ -119,6 +106,7 @@ section {
   margin: 0 2vw;
   text-decoration: none;
   color: #fff;
+  transition: 0.4s;
 }
 
 /* cool underline */
@@ -127,8 +115,12 @@ section {
   display: block;
   width: 0;
   height: 4px;
-  background: #fff;
+  background: #ffb667;
   transition: width 0.4s;
+}
+
+.navbar-item:hover {
+  color: #ffb667;
 }
 
 .navbar-item:hover::after {
@@ -159,11 +151,18 @@ section {
 .introduction .content {
   color: #fff;
   text-align: center;
+}
+
+.content h2 {
   text-transform: uppercase;
+  font-size: 1.35rem;
+  letter-spacing: 1px;
 }
 
 .content h1 {
-  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  font-size: 4rem;
 }
 
 .content p {
@@ -411,7 +410,7 @@ section {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #eee;
+  background-color: #f5f5f5;
   color: black;
   display: flex;
   flex-direction: column;
@@ -426,7 +425,7 @@ section {
 
 /* Style the back side */
 .flip-card-back {
-  background: linear-gradient(#f45c43, #eb3349, #aa2938);
+  background: linear-gradient(#414345, #232526);
   color: #fff;
   transform: rotateY(180deg);
   font-size: 1.2rem;
@@ -480,19 +479,16 @@ section {
 }
 
 .project-description {
-  background: #dd394c;
   padding: 4vw;
 }
 
 .project-description h2 {
-  color: rgba(255, 255, 255, 0.9);
   text-align: center;
 }
 
 .project-description p {
   margin-top: 2vh;
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 1);
 }
 
 .project-avatar {
@@ -611,7 +607,7 @@ footer {
   position: relative;
   height: 40vh;
   width: 100%;
-  background-color: #aa2938;
+  background: linear-gradient(#414345, #232526);
 }
 
 footer .content {
@@ -625,12 +621,13 @@ footer .content {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 footer .fab {
   font-size: 3rem;
   margin: 0 0.2vw;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   transition: 0.4s;
 }
 
