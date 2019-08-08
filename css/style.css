@@ -460,7 +460,7 @@ section {
 
 .project {
   display: flex;
-  margin-bottom: 4vh;
+  margin-top: 4vh;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
   border-radius: 3px/6px;
@@ -469,10 +469,6 @@ section {
   opacity: 0;
   transition: all 0.6s;
   transform: translateX(-30%) scale(0.95);
-}
-
-.project:last-child {
-  margin-bottom: 0;
 }
 
 .project:nth-child(even) {
@@ -588,6 +584,12 @@ section {
   font-size: 1.1rem;
 }
 
+@media (max-width: 900px) {
+  .contact {
+    padding-bottom: 5vh;
+  }
+}
+
 @media (orientation: portrait) and (max-width: 900px) {
   .contact-ways {
     flex-direction: column;
@@ -595,16 +597,11 @@ section {
 
   .contact-box {
     width: 80%;
+    padding: 5vw;
   }
 
   .contact-box:last-child {
     margin-top: 2vh;
-  }
-}
-
-@media (orientation: portrait) and (max-width: 900px) {
-  .contact-box {
-    padding: 5vw;
   }
 }
 
