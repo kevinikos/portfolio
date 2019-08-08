@@ -17,12 +17,13 @@ function scrollToSection() {
   const scrollStart = () => {
     sidebar.classList.remove("show");
     wrapperMenu.classList.remove("open");
-    scrollElm.scrollTop > introSection.offsetTop
-      ? scrollUpBtn.classList.add("show")
-      : scrollUpBtn.classList.remove("show");
-    scrollElm.scrollTop > introSection.offsetHeight
-      ? navbar.classList.add("active")
-      : navbar.classList.remove("active");
+    if (scrollElm.scrollTop > introSection.offsetHeight * 0.95) {
+      navbar.classList.add("active");
+      scrollUpBtn.classList.add("show");
+    } else {
+      navbar.classList.remove("active");
+      scrollUpBtn.classList.remove("show");
+    }
   };
 
   const scrollToSection = section => {
