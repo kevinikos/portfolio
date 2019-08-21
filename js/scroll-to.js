@@ -7,6 +7,7 @@ function scrollToSection() {
   const aboutMeSection = document.querySelector(".about-me");
   const skillsSection = document.querySelector(".skills");
   const projectsSection = document.querySelector(".portfolio");
+  const footer = document.querySelector("footer");
   // navbar/sidebar menu list items
   const startBtns = document.querySelectorAll(".start-btn");
   const aboutMeBtns = document.querySelectorAll(".about-me-btn");
@@ -23,6 +24,15 @@ function scrollToSection() {
     } else {
       navbar.classList.remove("active");
       scrollUpBtn.classList.remove("show");
+    }
+
+    scrollUpBtn.style.color = "rgba(0, 0, 0, 0.8)";
+    if (
+      scrollUpBtn.getBoundingClientRect().top + window.scrollY >
+        footer.getBoundingClientRect().top + window.scrollY &&
+      window.innerWidth < 1600
+    ) {
+      scrollUpBtn.style.color = "rgba(255, 255, 255, 0.9)";
     }
   };
 

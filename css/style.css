@@ -404,7 +404,7 @@ section {
   width: 10rem;
   height: 12rem;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  margin: 2.5vw 4vw;
+  margin: 2.5vw 5vw;
 }
 
 /* This container is needed to position the front and back side */
@@ -647,7 +647,7 @@ footer .fab {
 
 /* scroll up button */
 .scroll-up {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.8);
   font-size: 4rem;
   position: fixed;
   bottom: 5vh;
@@ -657,10 +657,6 @@ footer .fab {
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-}
-
-.scroll-up:hover {
-  color: rgba(0, 0, 0, 0.9);
 }
 
 .scroll-up.show {
